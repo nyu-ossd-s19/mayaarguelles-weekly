@@ -5,6 +5,7 @@
 // IMPORTS
 //
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Work+Sans');
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
@@ -27,7 +28,7 @@ body {
   margin: 0 auto;
   max-width: 740px;
   padding: 0 10px;
-  width: 100%;
+  width: calc(100% - 48px);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,6 +52,11 @@ h1 {
   }
 }
 
+article > h1 {
+  //text-transform: uppercase;
+  border-bottom: 1px solid $darkGray;
+}
+
 h2 {
   font-size: 24px;
 }
@@ -61,7 +67,6 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
 }
 
 p {
@@ -117,17 +122,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $darkGray;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: white;
+  background: $darkGray;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: white;
+  background: $darkGray;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -151,12 +156,12 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  //border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -176,7 +181,12 @@ img {
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 50%;
+    transition: filter 0.5s;
+    filter: sepia(1) saturate(200%) hue-rotate(270deg);
+    &:hover {
+      filter: initial;
+    }
   }
 }
 
@@ -194,7 +204,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $kosmos;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -214,7 +224,7 @@ nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 14px;
 
   @include mobile {
     float: none;
@@ -227,8 +237,9 @@ nav {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: 1px;
+    text-transform: lowercase;
 
     @include mobile {
       margin: 0 10px;
@@ -241,9 +252,16 @@ nav {
 // .main
 //
 
+#main {
+  border: 1px dotted black;
+  background: $lightGray;
+  padding: 24px 32px;
+  min-height: calc(100vh - 196px);
+}
+
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $darkGray;
 }
 
 .posts > .post:last-child {
@@ -251,12 +269,12 @@ nav {
   border-bottom: none;
 }
 
-.post {
+.post, .entry {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $gray;
+    color: $darkGray;
     font-size: 22px;
     font-style: italic;
   }
@@ -267,39 +285,74 @@ nav {
 
   .read-more {
     text-transform: uppercase;
+    font-family: $helvetica;
+    text-decoration: underline;
     font-size: 15px;
   }
 }
 
 .wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  //margin-top: 50px;
+  //border-top: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
+  //background-color: $lightGray;
 }
 
 footer {
   padding: 20px 0;
-  text-align: center;
+  text-align: right;
 }
 
 
 table {
   border-collapse:collapse;
-  border: 1px solid #eee;
+  border: 1px solid $lightGray;
 
   th {
     font-weight: 800;
-    background-color: #eee;
-    border: 1px solid white;
+    background-color: $lightGray;
+    border: 1px solid $darkGray;
     padding: 10px;
   }
 
   td {
-    border: 1px solid #eee;
+    border: 1px solid $darkGray;
     padding: 10px;
   }
+  
+  tr {
+    &:nth-child(2n-1) {
+      background-color: $gray;
+    }
+  }
 } 
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  &:focus {
+    clip: auto !important;
+    clip-path: none;
+    color: white;
+    display: block;
+    height: auto;
+    left: 0;
+    line-height: normal;
+    text-decoration: none;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+  }
+}
 
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

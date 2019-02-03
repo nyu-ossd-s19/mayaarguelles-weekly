@@ -4,19 +4,28 @@
 //
 
 // Colors
-$blue: #4183C4;
+$blue: #ff2d8b;
 
 // Grays
 $black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
+$darkerGray: #002aff;
+$darkGray: #002aff;
+$gray: #f7cff1;
+$lightGray: #fbeef9;
 $white: #fff;
 
+// Font declarations
+@font-face {
+  font-family: Planet Kosmos;
+  src: url('images/PLANK.woff') format('woff'),
+    url('/images/PLANK.TTF') format('truetype');
+       
+}
+
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$kosmos: 'Planet Kosmos', 'Playfair Display', Courier, monospace;
+$helvetica: 'Work Sans', Helvetica, Arial, sans-serif;
+$helveticaNeue: 'Playfair Display', Courier, monospace;
 $georgia: Georgia, serif;
 
 // Mobile breakpoints
