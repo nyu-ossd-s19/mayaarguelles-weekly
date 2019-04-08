@@ -27,3 +27,5 @@ Replace the first row with your contribution.
 | 3 | https://github.com/nyu-ossd-s19/Maya_Deanna-workflow | class activity | We worked on an in class git workflow activity |
 |  5  | https://github.com/nyu-ossd-s19/gatsby/commit/8d148a5209d36e273c49d5ede9f7db90fe7946fa | project | I created a general structure for solving a claimed bug |
 | 5 | https://github.com/nyu-ossd-s19/gatsby/issues/1 | project | I proposed a possible solution for creating a cross-platform solution to the claimed bug |
+| 6 | https://github.com/nyu-ossd-s19/gatsby/commit/938a0b0b0243d2a3ec8da6c558f0714e4f9ec8e6 | project | I changed the way we were checking against the root directory to use the path's native root property |
+| 6 | https://github.com/gatsbyjs/gatsby/pull/13096 | project | I opened a pull request for the bug that we fixed | 
