@@ -319,13 +319,13 @@ table {
     border: 1px solid $darkGray;
     padding: 10px;
   }
-  
+
   tr {
     &:nth-child(2n-1) {
       background-color: $gray;
     }
   }
-} 
+}
 
 .screen-reader-text {
   border: 0;
@@ -340,6 +340,22 @@ table {
   word-wrap: normal !important;
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
   &:focus {
+    clip: auto !important;
+    clip-path: none;
+    color: white;
+    display: block;
+    height: auto;
+    left: 0;
+    line-height: normal;
+    text-decoration: none;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+  }
+}
+
+*:focus {
+  .screen-reader-text {
     clip: auto !important;
     clip-path: none;
     color: white;
