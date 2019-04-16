@@ -340,10 +340,11 @@ table {
   word-wrap: normal !important;
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
   &:focus {
+    position: static !important;
     clip: auto !important;
     clip-path: none;
-    color: white;
-    display: block;
+    color: inherit;
+    display: inline;
     height: auto;
     left: 0;
     line-height: normal;
@@ -356,10 +357,11 @@ table {
 
 *:focus {
   .screen-reader-text {
+    position: static !important;
     clip: auto !important;
     clip-path: none;
-    color: white;
-    display: block;
+    color: inherit;
+    display: inline;
     height: auto;
     left: 0;
     line-height: normal;
