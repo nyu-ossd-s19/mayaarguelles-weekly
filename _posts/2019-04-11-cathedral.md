@@ -1,3 +1,8 @@
+---
+layout: post
+title: Cathedral and the Bazaar
+---
+
 > Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.
 
 I think this quote means that often, the most helpful way of solving a problem is reframing the problem itself. This definitely seems to be a true -- if you're coming at a problem from the wrong angle it's going to be difficult or impossible to come up with a good solution. Even if you are looking at the 'right' angle, perhaps a different perspective could provide greater insight or produce 'striking and innovative' solutions.
